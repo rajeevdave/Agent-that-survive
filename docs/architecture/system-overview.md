@@ -5,7 +5,7 @@
 ```
 ┌─────────────────────────────────────────────────────────┐
 │                    Application Layer                      │
-│         examples/ • playground/ • chapters/               │
+│         examples/ • playground/ • book-code/               │
 ├─────────────────────────────────────────────────────────┤
 │                   Pattern Layer                           │
 │  Routing • Memory • Tools • Reflection • Planning        │

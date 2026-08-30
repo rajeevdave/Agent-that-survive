@@ -9,8 +9,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/agentic-design-patterns.git
-cd agentic-design-patterns
+git clone https://github.com/rajeevdave/Agent-that-survive.git
+cd Agent-that-survive
 
 # Create virtual environment
 python -m venv .venv

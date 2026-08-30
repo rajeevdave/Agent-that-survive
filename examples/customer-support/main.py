@@ -10,7 +10,7 @@ Run:
 from __future__ import annotations
 import os, sys, uuid
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../../src"))
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../../chapters/12-production-agent"))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../../book-code/ch12-memory-infrastructure"))
 
 from rich.console import Console
 from rich.panel import Panel

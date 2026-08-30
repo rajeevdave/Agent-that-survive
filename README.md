@@ -5,12 +5,12 @@
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![CI](https://github.com/your-org/agentic-design-patterns/workflows/CI/badge.svg)](https://github.com/your-org/agentic-design-patterns/actions)
+[![CI](https://github.com/rajeevdave/Agent-that-survive/workflows/CI/badge.svg)](https://github.com/rajeevdave/Agent-that-survive/actions)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 *The official companion repository for*
-***Agentic Design Patterns: The Upgraded Companion***
-*— June 2026*
+***Agents That Survive: Engineering AI Systems for the Real World***
+*By Rajeev Kumar Dave — companion to Agentic Design Patterns by Antonio Gulli (September 2025)*
 
 </div>
 
@@ -23,12 +23,12 @@ Every code example from the book, implemented as **production-quality, runnable 
 The book removed code to stay readable. This repository puts it all back — better engineered, fully tested, ready to deploy.
 
 ```bash
-git clone https://github.com/your-org/agentic-design-patterns
-cd agentic-design-patterns
+git clone https://github.com/rajeevdave/Agent-that-survive.git
+cd Agent-that-survive
 pip install -r requirements-dev.txt && pip install -e .
 cp .env.example .env          # Add your API key
-pytest tests/unit/            # ✅ All tests pass (no API key needed)
-python chapters/01-prompt-chaining/minimal/main.py
+pytest book-code/              # ✅ All tests pass (no API key needed)
+python book-code/ch01-model-landscape/minimal/main.py
 ```
 
 ---
@@ -47,7 +47,7 @@ agentic-design-patterns/
 │   ├── workflow/                  # Core agent loop
 │   └── utils/                    # Config, logging, cache, monitoring
 │
-├── chapters/                      # Pattern implementations
+├── book-code/                      # Pattern implementations
 │   ├── 01-prompt-chaining/
 │   ├── 02-routing/
 │   ├── 03-model-selection/
@@ -78,11 +78,11 @@ agentic-design-patterns/
 
 | Chapter | Pattern | Book Reference | Run |
 |---------|---------|----------------|-----|
-| 01 | Prompt Chaining | Gap 1: Model Landscape | `python chapters/01-prompt-chaining/minimal/main.py` |
-| 02 | Routing | Gap 2: Framework Bias | `python chapters/02-routing/minimal/main.py` |
-| 04 | Tool Calling | Gap 3: Isolation Problem | `python chapters/04-tool-calling/minimal/main.py` |
-| 08 | Guardrails | Gap 4: Safety Blindspot | `python chapters/08-guardrails/minimal/main.py` |
-| 12 | Production Agent | Gap 3: All patterns combined | `python chapters/12-production-agent/production/main.py` |
+| 01 | Prompt Chaining | Gap 1: Model Landscape | `python book-code/ch01-model-landscape/minimal/main.py` |
+| 02 | Routing | Gap 2: Framework Bias | `python book-code/ch02-framework-bias/minimal/main.py` |
+| 04 | Tool Calling | Gap 3: Isolation Problem | `python book-code/ch04-safety-blindspot/minimal/main.py` |
+| 08 | Guardrails | Gap 4: Safety Blindspot | `python book-code/ch08-agent-to-agent-protocol/minimal/main.py` |
+| 12 | Production Agent | Gap 3: All patterns combined | `python book-code/ch12-memory-infrastructure/production/main.py` |
 
 ---
 
@@ -92,7 +92,7 @@ Every example works with any supported provider — swap with one environment va
 
 ```bash
 # OpenAI (default)
-DEFAULT_PROVIDER=openai EXECUTOR_MODEL=gpt-4.1 python chapters/12-production-agent/production/main.py
+DEFAULT_PROVIDER=openai EXECUTOR_MODEL=gpt-4.1 python book-code/ch12-memory-infrastructure/production/main.py
 
 # Anthropic
 DEFAULT_PROVIDER=anthropic EXECUTOR_MODEL=claude-sonnet-4-6 python ...
@@ -129,7 +129,7 @@ Services:
 pytest tests/unit/ -v
 
 # Chapter tests — no API keys required
-pytest chapters/ -v
+pytest book-code/ -v
 
 # Full suite with coverage (requires API keys)
 pytest --cov=src --cov-report=html
@@ -161,12 +161,12 @@ This repository implements every code example from the book, organised by gap:
 |-------------|-----------|---------------------|
 | Gap 1: Model Landscape | Model cascade, context windows, reasoning models | `src/agentic_patterns/llm/providers/factory.py` |
 | Gap 2: Framework Bias | Provider abstraction | `src/agentic_patterns/llm/providers/` |
-| Gap 3: Isolation Problem | Combined agent, all 6 patterns | `chapters/12-production-agent/` |
+| Gap 3: Isolation Problem | Combined agent, all 6 patterns | `book-code/ch12-memory-infrastructure/` |
 | Gap 4: Safety Blindspot | Guardrails, injection detection, tool privilege | `src/agentic_patterns/guardrails/` |
 | Gap 5: Cost & Latency | Cost calculator, caching, latency budgets | `src/agentic_patterns/telemetry/`, `benchmarks/` |
 | Gap 6: Harness Engineering | LLM judge, pass@k, CI/CD | `src/agentic_patterns/evaluation/` |
 | Gap 7: Databricks | Data-platform-native agents | `examples/databricks-agent/` |
-| Gap 8: A2A Protocol | Agent-to-agent communication | `chapters/11-multi-agent/` |
+| Gap 8: A2A Protocol | Agent-to-agent communication | `book-code/ch11-multi-agent-architecture/` |
 | Ch 9: Proprietary Models | OpenAI, Anthropic, Google pricing | `src/agentic_patterns/llm/providers/` |
 | Ch 10: Open-Source Models | Ollama, DeepSeek, Qwen, Llama | `src/agentic_patterns/llm/providers/ollama_provider.py` |
 
