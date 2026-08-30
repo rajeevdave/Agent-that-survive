@@ -14,7 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy source
 COPY src/ ./src/
-COPY chapters/ ./chapters/
+COPY book-code/ ./book-code/
 COPY examples/ ./examples/
 COPY playground/ ./playground/
 COPY scripts/ ./scripts/

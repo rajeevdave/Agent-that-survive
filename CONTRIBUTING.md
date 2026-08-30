@@ -5,20 +5,20 @@ Thank you for helping make this the best agentic AI resource available.
 ## Quick Start
 
 ```bash
-git clone https://github.com/your-org/agentic-design-patterns.git
-cd agentic-design-patterns
+git clone https://github.com/rajeevdave/Agent-that-survive.git
+cd Agent-that-survive
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements-dev.txt
 pip install -e .
 cp .env.example .env  # Add your API keys
-pytest tests/unit/    # Run tests (no API keys needed)
+pytest book-code/      # Run tests (no API keys needed)
 ```
 
 ## Repository Structure
 
 ```
 src/agentic_patterns/    # Shared framework — all reusable modules
-chapters/XX-name/        # One directory per pattern
+book-code/XX-name/        # One directory per pattern
   minimal/               # Simplest working implementation
   production/            # Production-grade implementation
   tests/                 # Chapter-specific tests
@@ -33,7 +33,7 @@ examples/                # Complete application examples
 
 ## Adding a New Chapter
 
-1. Copy `chapters/01-prompt-chaining/` as your template
+1. Copy `book-code/ch01-model-landscape/` as your template
 2. Implement `minimal/main.py` — simplest possible working example
 3. Implement `production/main.py` — production-quality with logging, retries, metrics
 4. Write tests in `tests/` — all tests must run with `MockProvider` (no real API calls)
@@ -63,7 +63,7 @@ test(guardrails): add edge case for empty response
 ## Pull Request Checklist
 
 - [ ] All tests pass: `pytest tests/unit/`
-- [ ] Linting passes: `ruff check src/ chapters/ tests/`
+- [ ] Linting passes: `ruff check src/ book-code/ tests/`
 - [ ] Type checking: `mypy src/agentic_patterns/`
 - [ ] No hardcoded API keys or secrets
 - [ ] Book reference in every module docstring

@@ -21,7 +21,7 @@ Input → [Step 1] → [Step 2] → Output
 
 See `minimal/main.py` — run with:
 ```bash
-python chapters/XX-pattern-name/minimal/main.py
+python book-code/XX-pattern-name/minimal/main.py
 ```
 
 ## Production Example

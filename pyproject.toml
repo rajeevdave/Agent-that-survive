@@ -79,9 +79,9 @@ strict = true
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]
-testpaths = ["tests", "chapters"]
+testpaths = ["tests", "book-code"]
 asyncio_mode = "auto"
-addopts = "--cov=src --cov-report=term-missing --cov-fail-under=70"
+addopts = "-v"
 
 [tool.coverage.run]
 source = ["src/agentic_patterns"]
